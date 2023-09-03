@@ -32,8 +32,8 @@ function filterByType(arr, type){
 }
 
 const palabras = filterByType(strangeArray, 'string');
+palabras.sort((a, b) => a.localeCompare(b, 'es-uy-u-kf-upper'));
 
-console.log(palabras);
 
 
 // Función que recibe por parámetro un array y muestra sus elementos en pantalla
@@ -48,14 +48,7 @@ function showList(array) {
   });
 }
 
-/*
-document.addEventListener("DOMContentLoaded", (e) => {
-  // Escribe tu solución aquí
-  // Sugerencia de cómo mostrar el array => showList(strangeArray);
 
-}
-
-);*/
 
 let laLista = document.getElementById("list");
   palabras.forEach((item) => {  
